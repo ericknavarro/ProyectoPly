@@ -113,9 +113,8 @@ def p_error(t):
 import ply.yacc as yacc
 parser = yacc.yacc()
 
-while True:
-    try:
-        s = input('olc2 > ')
-    except EOFError:
-        break
-    parser.parse(s)
+
+f = open("./entrada.txt", "r")
+input = f.read()
+print(input)
+parser.parse(input)
